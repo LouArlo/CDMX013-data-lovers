@@ -1,4 +1,4 @@
-# Data Lovers de Lulu y Mayan
+# Data Lovers 
 
 ## Índice
 
