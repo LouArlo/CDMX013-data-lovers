@@ -1,0 +1,9 @@
+@media only screen and (min-device-width: 960px){
+    /* Aquí van todos los estilos CSS */
+  }
+img {
+float:initial;
+width: 100%;
+display: inline-block;
+margin:0px;
+}
