@@ -2,6 +2,12 @@
     /* Aquí van todos los estilos CSS */
   }
 img {
+float: initial;
+width: 100%;
+/*display: inline-block;*/
+margin:0px;
+}
+.warning {
   width: 100%;
   display: inline-block;
   position: relative;
