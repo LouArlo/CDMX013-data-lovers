@@ -4,6 +4,6 @@
 img {
 float: initial;
 width: 100%;
-display: inline-block;
+/*display: inline-block;*/
 margin:0px;
 }
