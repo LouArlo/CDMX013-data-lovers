@@ -17,20 +17,36 @@ const generatorHTML=(characters)=>{
     const img = document.createElement('img')
     img.setAttribute('src',characters.img)
 
-   /*if (img === undefined) {
+    div.append(img,nameCharacter)
+
+    return div 
+
+}
+character.forEach(onecharacters=>root.appendChild(generatorHTML(onecharacters)))
+
+/*if (img === undefined) {
         img.src = '/images/HP_personajes_extra.png'
         console.log(img)
     }*/
 
-    div.append(img,nameCharacter)
-    return div 
+/*for (let i=0; i<character.lenght; i++ ) {
+    console.log("aqui anda el for")
+   //onecharacter = root.appendChild(generatorHTML(onecharacters))
+    $(character).ready(function() {
+        $('#root').append(
+            $(document.createElement('input')).prop({
+                type: 'button',
+                id: 'submit',
+                value: 'submit',
+                className: 'btn',
 
-}
+            })
+        );
+    });
+}*/
 
-character.forEach(onecharacters=>root.appendChild(generatorHTML(onecharacters))
 
 
-)
 
    /* let characterButton = div.cloneNode(true);
     characterButton.children[1].src = characters.img;

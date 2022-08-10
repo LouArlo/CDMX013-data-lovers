@@ -1,19 +1,10 @@
 .HpData-style{
-  /*padding: 3%;
-  display:grid;
-  grid-template-columns: auto auto auto auto;
-  text-align: center;
-  text-shadow: 1px white;
-  background-image:url(images/body-prueba-ms.png);*/
-
   padding: 3%;
   top: 1100px;
   left: 50px;
   position: absolute;
-  /*display: flex;*/
   display:grid;
   grid-template-columns: auto auto auto;
-  /*flex-wrap: wrap;*/
   text-align: center;
   border: 1px solid;
   width: 800px;
@@ -21,19 +12,12 @@
   overflow-y: scroll;
   overflow-x: hidden;
   background-image:url(images/parchman.png);
-
 } 
-  
+.HpData-style :hover{
+  transform: scale(.9);
+  box-shadow: .1px .1px .1px rgba(205, 194, 194, 0.088);
+}
 
-  
-  /*display:flex;
-  flex-wrap: wrap;
-  word-wrap: break-word;
-  align-items: center;
-  justify-content: space-evenly;
-  background-image:url(images/body-prueba-ms.png);
-  
-}*/
 
 .haveyou{
   position: absolute;
