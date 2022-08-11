@@ -1,4 +1,4 @@
-import alldata from './data/harrypotter/data2.js'
+import alldata from './data/harrypotter/data.js'
 
 const root = document.getElementById('root')
 
@@ -18,10 +18,10 @@ const generatorHTML=(characters)=>{
     nameCharacter.textContent=characters.name
 
     const img = document.createElement('img')
-    img.setAttribute('src',characters.img)
+    img.setAttribute('src',`${characters.img}`)
 
     if (characters.img === undefined) {
-        img.setAttribute('src','/images/HP_personajes_extra.png')
+        img.setAttribute('src','./images/HP_personajes_extra.png')
     }
 
     div.append (img,nameCharacter)
