@@ -13,6 +13,7 @@
   overflow-x: hidden;
   background-image:url(images/parchman.png);
 } 
+
 .HpData-style :hover{
   transform: scale(.9);
   box-shadow: .1px .1px .1px rgba(205, 194, 194, 0.088);
@@ -29,10 +30,10 @@
 
 }
 
-#info_characters{
+#houses{
   position: absolute;
   top: 1100px;
-  left: 1050px;
+  left: 1100px;
   height: 870px;
   width: 320px;
   border-radius: 0px;
@@ -41,5 +42,14 @@
   
 }
 
+.close {
+  background: transparent;
+  float: right;
+}
+
+.close:hover, .close:focus {
+background: transparent;
+cursor: pointer;
+}
 
 

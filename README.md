@@ -1,5 +1,27 @@
 # Data Lovers 
 
+Harry Poter
+
+¿Quiénes son los principales usuarios de producto? Toda aquella persona que quiera conocer acerca de Harry Potter
+* ¿Cuáles son los objetivos de estos usuarios en relación con el producto? Recordar algún hechizo, posima, personaje o simplemente distraerse recordando
+* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué? Podrán ver la información de forma fácil ya que la aplicación permite filtrar y ordenar la información de modo que sea práctico buscar algún dato en específico
+* ¿Cuándo utilizan o utilizarían el producto? Cuando tengan algún inquietud por algún dato que no recuerden bien o quieran conocer de manera general el mundo de Harry Potter
+
+Como primera parte del Proyecto tenemos un análisis de la información proporcionada, la cual furon 5 bases de datos correspondientes a los temas:
+* Personajes
+*Hechizos
+*Eventos Graciosos
+*Pósimas
+*Libros
+
+Se realizo un bosquejo a mano el cual fue plasmado en Figma y consiste de una pantalla continúa (en scroll) con diversas secciones:
+ 1) historia 1: muestra el información general  tal y como se encuentra diseñada en el origen (sin orden, sin filtros), se secciono un espacio para ello con una caja scroll, se colocarón las imágenes de los personajes más conocidos y en el resto de la base se colocó una imágen génerica.
+
+ 2)
+
+
+
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
