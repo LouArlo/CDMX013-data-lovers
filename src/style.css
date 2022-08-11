@@ -1,9 +1,55 @@
-@media only screen and (min-device-width: 960px){
-    /* Aquí van todos los estilos CSS */
-  }
-img {
-float:initial;
-width: 100%;
-display: inline-block;
-margin:0px;
+.HpData-style{
+  padding: 3%;
+  top: 1100px;
+  left: 50px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  border: 1px solid;
+  width: 800px;
+  height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image:url(images/parchman.png);
+} 
+
+.HpData-style :hover{
+  transform: scale(.9);
+  box-shadow: .1px .1px .1px rgba(205, 194, 194, 0.088);
 }
+
+
+.haveyou{
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  mix-blend-mode: darken;
+  top: 920Px;
+  left: 320px;
+
+}
+
+#houses{
+  position: absolute;
+  top: 1100px;
+  left: 1100px;
+  height: 870px;
+  width: 320px;
+  border-radius: 0px;
+  background: rgba(48, 25, 25, 0.417);
+  z-index: 1;
+  
+}
+
+.close {
+  background: transparent;
+  float: right;
+}
+
+.close:hover, .close:focus {
+background: transparent;
+cursor: pointer;
+}
+
+
