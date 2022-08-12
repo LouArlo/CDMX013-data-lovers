@@ -1,26 +1,26 @@
 .HpData-style{
   padding: 3%;
-  top: 1100px;
-  left: 50px;
+  top: 900px;
+  left: 140px;
   position: absolute;
   display:grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   text-align: center;
-  border: 1px solid;
-  width: 800px;
-  height: 800px;
+  /*border: 1px solid;*/
+  width: 690px;
+  height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-image:url(images/parchman.png);
+  /*background-image:url(images/parchman.png);*/
 } 
 
-.HpData-style :hover{
+/*.HpData-style :hover{
   transform: scale(.9);
   box-shadow: .1px .1px .1px rgba(205, 194, 194, 0.088);
-}
+}*/
 
 
-.haveyou{
+/*.haveyou{
   position: absolute;
   display: inline-block;
   z-index: 1;
@@ -40,9 +40,9 @@
   background: rgba(48, 25, 25, 0.417);
   z-index: 1;
   
-}
+}*/
 
-.close {
+/*.close {
   background: transparent;
   float: right;
 }
@@ -50,6 +50,6 @@
 .close:hover, .close:focus {
 background: transparent;
 cursor: pointer;
-}
+}*/
 
 
