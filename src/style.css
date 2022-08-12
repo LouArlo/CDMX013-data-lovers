@@ -12,8 +12,29 @@
   overflow-y: scroll;
   overflow-x: hidden;
   background-image:url(images/parchman.png);
+  z-index: 4;
 } 
 .HpData-style :hover{
+  transform: scale(.9);
+  box-shadow: .1px .1px .1px rgba(205, 194, 194, 0.088);
+}
+.accioSpells-style{
+  padding: 2%;
+  top: 1100px;
+  left: 50px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  border: 1px solid;
+  width: 800px;
+  height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image:url(images/parchman.png);
+  z-index: 3;
+} 
+.accioSpells-style :hover{
   transform: scale(.9);
   box-shadow: .1px .1px .1px rgba(205, 194, 194, 0.088);
 }

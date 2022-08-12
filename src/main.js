@@ -1,12 +1,9 @@
 import alldata from './data/harrypotter/data.js'
 
+
 const root = document.getElementById('root')
-
 root.classList='HpData-style'
-
-const character=alldata.characters
-
-
+const character=alldata.characters 
 
 const generatorHTML=(characters)=>{
     const div = document.createElement('div')
@@ -19,10 +16,34 @@ const generatorHTML=(characters)=>{
 
     div.append(img,nameCharacter)
 
+
     return div 
 
 }
-character.forEach(onecharacters=>root.appendChild(generatorHTML(onecharacters)))
+character.forEach(onecharacters=>root.appendChild(generatorHTML(onecharacters)));
+
+
+const accio = document.getElementById('spell')
+accio.classList='accioSpells-style'
+const spell=alldata.spells
+
+const generatorDivSpellHTML=(spells)=>{
+    const divSpells = document.createElement('div')
+
+    const nameSpell = document.createElement('h2')
+    nameSpell.textContent=spells.name
+
+    const img = document.createElement('img')
+    img.setAttribute('src',characters.img)
+
+    divSpells.append(img,nameSpell)
+
+
+    return divSpells
+
+}
+spell.forEach(onespells=>divSpells.appendChild(generatorDivSpellHTML(onespells)))
+
 
 /*if (img === undefined) {
         img.src = '/images/HP_personajes_extra.png'
