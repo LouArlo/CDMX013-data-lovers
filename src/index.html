@@ -8,15 +8,22 @@
   </head>
   <body>
     <header>
-     <!-- <img src="images/header.png" class="header">-->
+     <img src="images/header.png" class="header">
     </header>
 
     <nav class="navbar" id="navigation">
       <ul>
-        <li><a class="chars" href="#" id="characters">Characters</a></li>
-        <li><a href="#" id="spells">Spells</a></li>
-        <li><a href="#" id="funfacts">Fun facts</a></li>
-        <li><a href="#" id="books">Books</a></li>
+        <a class="chars" href="#" id="characters">Characters</a>
+        <a class="chars" href="#" id="spells">Spells</a>
+        <a class="chars" href="#" id="fun facts">Fun facts</a>
+        <a class="chars" href="#" id="potions">Potions</a>
+        <a class="chars" href="#" id="books">Books</a>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
       </ul>
     </nav>
 

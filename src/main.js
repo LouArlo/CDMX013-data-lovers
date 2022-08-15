@@ -98,3 +98,46 @@ spell.forEach(onespell=>root.appendChild(generatorHTML(onespell)))
 },true);
 
 
+
+document.getElementById("fun facts").addEventListener("click",function(){
+    alert("funfacts")
+
+document.getElementById("root").innerHTML= "";
+
+const root = document.getElementById('root')
+
+root.classList='HpData-style'
+
+/*seleccion de characters*/
+
+const funFacts=alldata.funFacts
+
+const generatorHTML=(funFacts)=>{
+
+
+    const div = document.createElement('div')
+
+    const nameFunFacts = document.createElement('h2')
+    nameFunFacts.textContent=funFacts.type
+
+    const descriptionFunFacts = document.createElement('h2')
+    descriptionFunFacts.textContent=funFacts.content
+
+    /*const img = document.createElement('img')
+    img.setAttribute('src',`${spells.img}`)
+
+    if (spells.img === undefined) {
+        img.setAttribute('src','./images/HP_personajes_extra.png')
+    }*/
+
+    div.append (nameFunFacts,descriptionFunFacts)
+    
+    
+    return div 
+}
+
+
+
+funFacts.forEach(onefunFacts=>root.appendChild(generatorHTML(onefunFacts)))
+
+},true);
