@@ -16,7 +16,7 @@ import alldata from './data/harrypotter/data.js'
 /* All Data*/
 const root = document.getElementById('root')
 root.classList = 'HpData-style'
-/*seleccion de characters*/
+
 const character = alldata.characters
 const generatorHTML = (characters) => {
   const div = document.createElement('div')
@@ -31,93 +31,12 @@ const generatorHTML = (characters) => {
   return div
 }
 character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
-/*2*/
 
- /* const root = document.getElementById('root')
-
-  root.classList = 'HpDataS-style'*/
-
- 
-  /*const spell = alldata.spells
-
-  const generatorHTML = (spells) => {
-
-
-    const div = document.createElement('div')
-
-    const nameSpell = document.createElement('h2')
-    nameSpell.textContent = spells.name
-
-    const descriptionSpell = document.createElement('h3')
-    descriptionSpell.textContent = spells.description
-
-    /*const img = document.createElement('img')
-    img.setAttribute('src',`${spells.img}`)
-
-    if (spells.img === undefined) {
-        img.setAttribute('src','./images/HP_personajes_extra.png')
-    }*/
-
-   /* div.append(nameSpell, descriptionSpell)
-
-
-    return div
-  }
-
-
-  spell.forEach(onespell => root.appendChild(generatorHTML(onespell)))
-
-/* fin2*/
-
-
-/* fun Fact grid*/
-/*document.getElementById("funFacts").addEventListener("click", function () {
-  alert("funFacts")
-
-  document.getElementById("root").innerHTML = "";
-
-  const root = document.getElementById('root')
-
-  root.classList = 'HpDataS-style'
-
-
-  const funFact = alldata.funFacts
-
-  const generatorHTML = (funFacts) => {
-
-
-    const div = document.createElement('div')
-
-    const typeFunFact = document.createElement('h2')
-    typeFunFact.textContent = funFacts.type
-
-    const contentFunFact = document.createElement('h3')
-    contentFunFact.textContent = funFacts.content
-
-    /*const img = document.createElement('img')
-    img.setAttribute('src',`${spells.img}`)
-
-    if (spells.img === undefined) {
-        img.setAttribute('src','./images/HP_personajes_extra.png')
-    }*/
-
-   /* div.append(typeFunFact, contentFunFact)
-
-
-    return div
-  }
-
-
-
-  funFact.forEach(onefunFact=> root.appendChild(generatorHTML(onefunFact)))
-
-}, true);*/
-/* fin 3*/
   
 
 /*characters Grid*/
 document.getElementById("characters").addEventListener("click", function () {
-  alert("character")
+  /*alert("character")*/
 
   document.getElementById("root").innerHTML = "";
 
@@ -160,7 +79,7 @@ document.getElementById("characters").addEventListener("click", function () {
 
 /* spells grid*/
 document.getElementById("spells").addEventListener("click", function () {
-  alert("spells")
+  /*alert("spells")*/
 
   document.getElementById("root").innerHTML = "";
 
@@ -203,8 +122,8 @@ document.getElementById("spells").addEventListener("click", function () {
 
 
 /* fun Fact grid*/
-document.getElementById("funFacts").addEventListener("click", function () {
-  alert("funFacts")
+document.getElementById("fun facts").addEventListener("click", function () {
+  /*alert("funFacts")*/
 
   document.getElementById("root").innerHTML = "";
 
@@ -246,9 +165,54 @@ document.getElementById("funFacts").addEventListener("click", function () {
 }, true);
 
 
+/* Potions grid*/
+document.getElementById("potions").addEventListener("click", function () {
+   /* alert("Potions")*/
+  
+    document.getElementById("root").innerHTML = "";
+  
+    const root = document.getElementById('root')
+  
+    root.classList = 'HpDataS-style'
+  
+  
+    const potion = alldata.potions
+  
+    const generatorHTML = (potions) => {
+  
+  
+      const div = document.createElement('div')
+  
+      const namePotions = document.createElement('h2')
+      namePotions.textContent = potions.name
+  
+      const descriptionPotions = document.createElement('h3')
+      descriptionPotions.textContent = potions.description
+  
+      /*const img = document.createElement('img')
+      img.setAttribute('src',`${spells.img}`)
+  
+      if (spells.img === undefined) {
+          img.setAttribute('src','./images/HP_personajes_extra.png')
+      }*/
+  
+      div.append(namePotions, descriptionPotions)
+  
+  
+      return div
+    }
+  
+  
+  
+    potion.forEach(onepotions=> root.appendChild(generatorHTML(onepotions)))
+  
+  }, true);
+  
+
+
 /* books grid*/
 document.getElementById("books").addEventListener("click", function () {
-  alert("books")
+  /*alert("books")*/
 
   document.getElementById("root").innerHTML = "";
 
@@ -287,4 +251,4 @@ document.getElementById("books").addEventListener("click", function () {
 
    book.forEach(onebook => root.appendChild(generatorHTML(onebook)))
 
-
+})
