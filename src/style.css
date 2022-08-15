@@ -1,18 +1,26 @@
 .HpData-style{
   padding: 3%;
-  top: 900px;
-  left: 140px;
+  top: 890px;
+  left: 250px;
   position: absolute;
   display:grid;
   grid-template-columns: auto auto auto auto;
   text-align: center;
   /*border: 1px solid;*/
   width: 690px;
-  height: 400px;
+  height: 480px;
   overflow-y: scroll;
   overflow-x: hidden;
   /*background-image:url(images/parchman.png);*/
 } 
+
+header{
+  background-image:url(images/header.png);
+}
+body {
+  margin: 0;
+}
+
 
 .HpDataS-style{
   padding: 3%;
@@ -43,35 +51,42 @@ h3{
   opacity: inherit;
 }*/
 
+
 #navigation {
   overflow: hidden;
-  background-color: #333;
+  background-image:url(images/backnav.png);
+  
 }
-
+  
 #navigation a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #e7dddd;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  padding: 25px 25px;
+  text-decoration-color: rgb(161, 13, 13);
+  font-size: 23px;
+  text-shadow: rgb(3, 2, 2);
 }
 
-#navigation a:hover {
+/*#navigation a:hover {
   background-color: #ddd;
   color: black;
-}
+}*/
 
 #navigation a.chars {
-  background-color: #04AA6D;
+  background-color: #5f1f03ac;
   color: white;
 }
 
-.root {
-  padding: 16px;
+#navigation a.chars:hover {
+  background-color: #ddd;
+  color: rgb(8, 7, 7);
 }
 
+.root {
+  padding: 20px;
+}
 .sticky {
   position: fixed;
   top: 0;
@@ -79,5 +94,16 @@ h3{
 }
 
 .sticky + .root {
-  padding-top: 60px;
+  padding-top: 25px;
+}
+
+.navbar .search-container {
+  float: right;
+}
+
+.navbar input[type=text]{
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
 }
