@@ -13,12 +13,45 @@
   overflow-x: hidden;
   /*background-image:url(images/parchman.png);*/
 } 
+
 header{
   background-image:url(images/header.png);
 }
 body {
   margin: 0;
 }
+
+
+.HpDataS-style{
+  padding: 3%;
+  top: 940px;
+  left: 100px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  /*border: 1px solid;*/
+  width: 750px;
+  height: 360px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /*background-image:url(images/parchman.png);*/
+} 
+
+h3{
+  font-size: 1em;
+  font-weight: normal;
+  text-align: justify;
+  margin: 10px;
+  background: #d7d3cd40;
+  
+}
+
+/*imgS {
+  opacity: inherit;
+}*/
+
+
 #navigation {
   overflow: hidden;
   background-image:url(images/backnav.png);
