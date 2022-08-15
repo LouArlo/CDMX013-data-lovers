@@ -287,4 +287,4 @@ document.getElementById("books").addEventListener("click", function () {
 
    book.forEach(onebook => root.appendChild(generatorHTML(onebook)))
 
-
+})
