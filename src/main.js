@@ -32,9 +32,7 @@ const generatorHTML = (characters) => {
 }
 character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
-  
-
-/*characters Grid*/
+/*seleccion de characters*/
 document.getElementById("characters").addEventListener("click", function () {
   /*alert("character")*/
 
@@ -44,8 +42,7 @@ document.getElementById("characters").addEventListener("click", function () {
 
   root.classList = 'HpData-style'
 
-  /*seleccion de characters*/
-
+  
   const character = alldata.characters
 
 
@@ -54,6 +51,7 @@ document.getElementById("characters").addEventListener("click", function () {
 
     const div = document.createElement('div')
 
+  
     const nameCharacter = document.createElement('h2')
     nameCharacter.textContent = characters.name
 
@@ -73,6 +71,7 @@ document.getElementById("characters").addEventListener("click", function () {
   character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
 }, true);
+
 
 
 
@@ -101,8 +100,8 @@ document.getElementById("spells").addEventListener("click", function () {
     const descriptionSpell = document.createElement('h3')
     descriptionSpell.textContent = spells.description
 
-    const imgS = document.createElement('img')
-    imgS.setAttribute('src',`${spells.img}`)
+    /*const imgS = document.createElement('img')
+    imgS.setAttribute('src',`${spells.img}`)*/
 
     /*if (spells.img === undefined) {
         imgS.setAttribute('src','./images/spells.jpg')
@@ -252,3 +251,55 @@ document.getElementById("books").addEventListener("click", function () {
    book.forEach(onebook => root.appendChild(generatorHTML(onebook)))
 
 })
+
+/*seccion de filter*/
+/*let charsHouses = alldata.characters.filter(function(chars) {
+     return chars.houses == "Gryffindor"
+ });
+ console.log (charsHouses);*/
+/*characters Grid*/
+ /*let filtervar = "character"*/
+       /* let elementVar =alldata.characters
+        let objectX ="houses"
+        let elementY = "Gryffindor"
+        let filterX = elementVar.filter(function(elementX) {
+        return elementX.objectX == elementY
+        });
+console.log (filterX);*/
+document.getElementById("gr").addEventListener("click", function () {
+   alert("escuchando el addEventListener")
+  document.getElementById("root").innerHTML = "";
+
+   const root = document.getElementById('root');
+   console.log(root)
+
+  root.classList = 'HpDataS-style'
+
+  /*const house = alldata.characters*/
+  let charsHouses = alldata.characters.filter(function(chars) {
+    (chars.house == "Gryffindor")
+   })
+
+   console.log(charsHouses)
+  const generatorHTML = (charac) => {
+
+
+    const div = document.createElement('div')
+
+    const characterHouses = document.createElement('h2')
+    characterHouses.textContent = charsHouses.house
+
+    const characterName = document.createElement('h3')
+    characterName.textContent = charsHouses.name
+
+     /*let charsHouses = alldata.characters.filter(function(chars) {
+      (chars.houses == "Gryffindor")
+     })*/
+
+    div.append(characterHouses, characterName)
+
+    console.log(div)
+
+    return div 
+
+}})
