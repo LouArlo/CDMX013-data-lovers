@@ -32,7 +32,9 @@ const generatorHTML = (characters) => {
 }
 character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
-  
+
+
+
 
 /*characters Grid*/
 document.getElementById("characters").addEventListener("click", function () {
@@ -252,3 +254,10 @@ document.getElementById("books").addEventListener("click", function () {
    book.forEach(onebook => root.appendChild(generatorHTML(onebook)))
 
 })
+
+
+
+/*let charsHouses = alldata.characters.filter(function(chars){
+    return chars.house=="Gryffindor" 
+}); 
+console.log(charsHouses);*/
