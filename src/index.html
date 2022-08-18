@@ -19,18 +19,20 @@
         <a class="chars" href="#" id="potions">Potions</a>
         <a class="chars" href="#" id="books">Books</a>
         
-      <!--- <div class="search-container">
+      <!--<div class="search-container">
           <form action="/action_page.php">
             <input type="text" placeholder="Filtrar por:" name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>-->
       </ul>
-      <form id="boxFilter">
-        <label for="selectorshp">Choose a Filter</label>
-        <select name="selecthp" id="selecthp">
+      <form > <!--id="boxFilter">-->
+        <!--<label for="selectorshp">Choose a Filter</label>-->
+        Filtar por: <br>
+        <!--<input type="text" id="filterBy">-->
+        <select id="seleccion">
           <optgroup label="Character Houses">
-            <option value="Gryffindor" id="gr">Gryffindor</option>
+            <option value="Gryffindor" id="gr" >Gryffindor</option>
             <option value="Ravenclow" id="ra">Revenclaw</option>
             <option value="Slytherin" id="sl">Slytherin</option>
             <option value="Hufflepuff" id="hu">Hufflepuff</option>
@@ -43,8 +45,7 @@
             <option value="Hex" id="he">Hex</option>
             <option value="Dark Charm" id="da">Dark Charm</option>
             <option value="Transportation" id="tp">Transportation</option>
-  
-          </optgroup>
+            </optgroup>
         </select>
       </form>
     </nav>
@@ -52,7 +53,7 @@
     
 
     <div id="root" class="box"></div>
-    <div id="filter" class="boxfilter"></div>
+    <!--<<div id="filterOther" class="boxfilter"></div>>-->
 
   
     <img src="images/body-page.png"  class="body">
