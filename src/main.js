@@ -25,6 +25,8 @@ const character = alldata.characters
 
 character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
+
+
 //-------filtrado por objeto(characters) ------------------
 document.getElementById("characters").addEventListener("click", function () {
   document.getElementById("root").innerHTML = "";
