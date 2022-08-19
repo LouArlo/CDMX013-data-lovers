@@ -1,22 +1,7 @@
-.HpData-style{
-  padding: 3%;
-  top: 500px;
-  left: 165px;
-  position: absolute;
-  display:grid;
-  grid-template-columns: auto auto auto auto;
-  text-align: center;
-  /*border: 1px solid;*/
-  width: 690px;
-  height: 350px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-image:url(images/parchman.png);
-} 
-
 header{
   background-image:url(images/header.png);
 }
+
 body {
   margin: 0;
   background-image:url(images/bodyback.png);
@@ -24,43 +9,18 @@ body {
   height: 1079px;
 }
 
-
-.HpDataS-style{
-  padding: 3%;
-  top: 500px;
-  left: 120px;
-  position: absolute;
-  display:grid;
-  grid-template-columns: auto auto auto;
-  text-align: center;
-  /*border: 1px solid;*/
-  width: 750px;
-  height: 360px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-image:url(images/parchman.png);
-} 
-
-h3{
-  font-size: 1em;
-  font-weight: normal;
-  text-align: justify;
-  margin: 10px;
-  background: #d7d3cd40;
-  
-}
-
 #navigation {
   overflow: hidden;
   background-image:url(images/backnav.png);
   display: flex;
+  z-index: 2;
   
 }
   
 #navigation a {
   float: left;
   display: block;
-  color: #e7dddd;
+  color: #ac9e9e;
   text-align: center;
   padding: 18px 18px;
   text-decoration-color: rgb(161, 13, 13);
@@ -83,9 +43,6 @@ h3{
   color: rgb(8, 7, 7);
 }
 
-.root {
-  padding: 20px;
-}
 .sticky {
   position: fixed;
   top: 0;
@@ -95,18 +52,6 @@ h3{
 .sticky + .root {
   padding-top: 25px;
 }
-
-/*.navbar .search-container {
-  float: right;
-}
-
-.navbar input[type=text]{
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  margin-left: 500px;
-}*/
 
 .li  {
   display: none;
@@ -133,3 +78,72 @@ form
   font-family: auto;
   color: azure;
 }
+
+.HpData-style{
+  padding: 3%;
+  top: 500px;
+  left: 165px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  text-align: center;
+  /*border: 1px solid;*/
+  width: 690px;
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image:url(images/parchman.png);
+  z-index: 1;
+} 
+
+.HpDataS-style{
+  padding: 3%;
+  top: 500px;
+  left: 120px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  /*border: 1px solid;*/
+  width: 750px;
+  height: 360px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image:url(images/parchman.png);
+} 
+
+.HpDataF-style{
+  padding: 3%;
+  top: 500px;
+  left: 120px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  /*border: 1px solid;*/
+  width: 750px;
+  height: 360px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-repeat:no-repeat;
+  /*background-color: darkolivegreen;*/
+  background-image: url(images/dementor.png);
+  /*opacity: 3;*/
+  ;
+} 
+
+
+h3{
+  font-size: 1em;
+  font-weight: normal;
+  text-align: justify;
+  margin: 10px;
+  background: #d7d3cd40;
+  
+}
+
+.root {
+  padding: 20px;
+}
+
+
