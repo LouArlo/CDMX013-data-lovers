@@ -1,3 +1,8 @@
+import alldata from './data/harrypotter/data.js';
+import {generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook} from './generatorHTML.js'
+import {filterbyword, filterbyword2} from './dataF.js'
+
+// ------------navbar-----------------------
 window.onscroll = function () { myFunction() };
 
 var navbar = document.getElementById("navigation");
@@ -11,66 +16,26 @@ function myFunction() {
   }
 }
 
-import alldata from './data/harrypotter/data.js'
 
-/* All Data*/
+//---------------Carga de data-historia 1----------------
 const root = document.getElementById('root')
 root.classList = 'HpData-style'
 
 const character = alldata.characters
-const generatorHTML = (characters) => {
-  const div = document.createElement('div')
-  const nameCharacter = document.createElement('h2')
-  nameCharacter.textContent = characters.name
-  const img = document.createElement('img')
-  img.setAttribute('src', `${characters.img}`)
-  if (characters.img === undefined) {
-    img.setAttribute('src', './images/HP_personajes_extra.png')
-  }
-  div.append(img, nameCharacter)
-  return div
-}
+
 character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
 
 
-
-
-/*characters Grid*/
+//-------filtrado por objeto(characters) ------------------
 document.getElementById("characters").addEventListener("click", function () {
-  /*alert("character")*/
-
   document.getElementById("root").innerHTML = "";
 
   const root = document.getElementById('root')
-
   root.classList = 'HpData-style'
-
-  /*seleccion de characters*/
 
   const character = alldata.characters
 
-
-  const generatorHTML = (characters) => {
-
-
-    const div = document.createElement('div')
-
-    const nameCharacter = document.createElement('h2')
-    nameCharacter.textContent = characters.name
-
-    const img = document.createElement('img')
-    img.setAttribute('src', `${characters.img}`)
-
-    if (characters.img === undefined) {
-      img.setAttribute('src', './images/HP_personajes_extra.png')
-    }
-
-    div.append(img, nameCharacter)
-
-
-    return div
-  }
 
   character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
@@ -78,186 +43,79 @@ document.getElementById("characters").addEventListener("click", function () {
 
 
 
-
-/* spells grid*/
+//-------filtrado por objeto(spells) ----------------
 document.getElementById("spells").addEventListener("click", function () {
-  /*alert("spells")*/
-
   document.getElementById("root").innerHTML = "";
 
   const root = document.getElementById('root')
-
   root.classList = 'HpDataS-style'
 
- 
   const spell = alldata.spells
 
-  const generatorHTML = (spells) => {
-
-
-    const div = document.createElement('div')
-
-    const nameSpell = document.createElement('h2')
-    nameSpell.textContent = spells.name
-
-    const descriptionSpell = document.createElement('h3')
-    descriptionSpell.textContent = spells.description
-
-    const imgS = document.createElement('img')
-    imgS.setAttribute('src',`${spells.img}`)
-
-    /*if (spells.img === undefined) {
-        imgS.setAttribute('src','./images/spells.jpg')
-    }*/
-
-    div.append(nameSpell, descriptionSpell)
-
-
-    return div
-  }
-
-
-
-  spell.forEach(onespell => root.appendChild(generatorHTML(onespell)))
+  spell.forEach(onespell => root.appendChild(generatorHTMLdescribe(onespell)))
 
 }, true);
 
-
-/* fun Fact grid*/
+// ------filtrado por objeto (fun Fact)----------------
 document.getElementById("fun facts").addEventListener("click", function () {
-  /*alert("funFacts")*/
-
   document.getElementById("root").innerHTML = "";
 
   const root = document.getElementById('root')
-
   root.classList = 'HpDataS-style'
-
 
   const funFact = alldata.funFacts
 
-  const generatorHTML = (funFacts) => {
-
-
-    const div = document.createElement('div')
-
-    const typeFunFact = document.createElement('h2')
-    typeFunFact.textContent = funFacts.type
-
-    const contentFunFact = document.createElement('h3')
-    contentFunFact.textContent = funFacts.content
-
-    /*const img = document.createElement('img')
-    img.setAttribute('src',`${spells.img}`)
-
-    if (spells.img === undefined) {
-        img.setAttribute('src','./images/HP_personajes_extra.png')
-    }*/
-
-    div.append(typeFunFact, contentFunFact)
-
-
-    return div
-  }
-
-
-
-  funFact.forEach(onefunFact=> root.appendChild(generatorHTML(onefunFact)))
+  funFact.forEach(onefunFact => root.appendChild(generatorHTMLff(onefunFact)))
 
 }, true);
 
-
-/* Potions grid*/
+// -------filtrado por objeto (Potions)-----------------
 document.getElementById("potions").addEventListener("click", function () {
-   /* alert("Potions")*/
-  
-    document.getElementById("root").innerHTML = "";
-  
-    const root = document.getElementById('root')
-  
-    root.classList = 'HpDataS-style'
-  
-  
-    const potion = alldata.potions
-  
-    const generatorHTML = (potions) => {
-  
-  
-      const div = document.createElement('div')
-  
-      const namePotions = document.createElement('h2')
-      namePotions.textContent = potions.name
-  
-      const descriptionPotions = document.createElement('h3')
-      descriptionPotions.textContent = potions.description
-  
-      /*const img = document.createElement('img')
-      img.setAttribute('src',`${spells.img}`)
-  
-      if (spells.img === undefined) {
-          img.setAttribute('src','./images/HP_personajes_extra.png')
-      }*/
-  
-      div.append(namePotions, descriptionPotions)
-  
-  
-      return div
-    }
-  
-  
-  
-    potion.forEach(onepotions=> root.appendChild(generatorHTML(onepotions)))
-  
-  }, true);
-  
-
-
-/* books grid*/
-document.getElementById("books").addEventListener("click", function () {
-  /*alert("books")*/
-
   document.getElementById("root").innerHTML = "";
 
   const root = document.getElementById('root')
-
   root.classList = 'HpDataS-style'
 
- 
+  const potion = alldata.potions
+
+  potion.forEach(onepotions => root.appendChild(generatorHTMLdescribe(onepotions)))
+
+}, true);
+
+//---------filtrado pot objeto (books)---------------
+document.getElementById("books").addEventListener("click", function () {
+  document.getElementById("root").innerHTML = "";
+
+  const root = document.getElementById('root')
+  root.classList = 'HpDataS-style'
+
   const book = alldata.books
 
-  const generatorHTML = (books) => {
+  book.forEach(onebook => root.appendChild(generatorHTMLbook(onebook)))
+
+}, true);
+
+//---------uso de función Filter para clasificación por clase----------
+
+document.getElementById("seleccion").addEventListener("click", function () {
+  document.getElementById("root").innerHTML = "";
+  console.log(seleccion.value);
 
 
-    const div = document.createElement('div')
+  const root = document.getElementById('root')
+  root.classList = 'HpDataF-style'
 
-    const titleBook = document.createElement('h2')
-    titleBook.textContent = books.title
-
-    const descriptionBook = document.createElement('h3')
-    descriptionBook.textContent = books.description
-
-    /*const img = document.createElement('img')
-    img.setAttribute('src',`${spells.img}`)
-
-    if (spells.img === undefined) {
-        img.setAttribute('src','./images/HP_personajes_extra.png')
-    }*/
-
-    div.append(titleBook, descriptionBook)
+  const character = alldata.characters
 
 
-    return div
+  const wordfilter = seleccion.value
+  console.log(seleccion.value)
+  if (wordfilter == "Gryffindor" || wordfilter == "Ravenclaw" || wordfilter == "Slytherin" || wordfilter == "Hufflepuff") {
+    filterbyword(alldata, wordfilter).forEach(onecharacters => root.appendChild(generatorHTMLfilter(onecharacters)))
+  } else {
+    filterbyword2(alldata, wordfilter).forEach(onecharacters => root.appendChild(generatorHTMLfilter(onecharacters)))
   }
 
+}, true)
 
 
-   book.forEach(onebook => root.appendChild(generatorHTML(onebook)))
-
-})
-
-
-
-/*let charsHouses = alldata.characters.filter(function(chars){
-    return chars.house=="Gryffindor" 
-}); 
-console.log(charsHouses);*/
