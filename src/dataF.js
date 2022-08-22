@@ -7,6 +7,5 @@ export function filterbyword(alldata, wordfilter) {
 export function filterbyword2(alldata, wordfilter) {
   return alldata.spells.filter(function (chars) {
     return chars.spell_type == wordfilter
-    console.log()
   })
 }

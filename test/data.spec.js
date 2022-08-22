@@ -1,13 +1,13 @@
-import { example, anotherExample } from '../src/data.js';
+import {filterbyword} from '../src/dataF.js';
 
 
 describe('example', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterbyword).toBe('function');
   });
 
   it('returns `example`', () => {
-    expect(example()).toBe('example');
+    expect(filterbyword()).toBe('example');
   });
 });
 
