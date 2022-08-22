@@ -96,6 +96,31 @@ form
   z-index: 1;
 } 
 
+button {
+  
+  font-size: 20px;
+  padding: 0px 0px;
+  margin: 2px;
+  position: absolute;
+  font-size: 15px;
+  cursor: pointer;
+  /*border-radius: 5px;*/
+}
+
+#az{
+    top: 247px;
+    left: 647px;  
+    /*background: #18181191;
+    color: #8d8d82;*/
+    
+}
+
+#za{
+    top: 279px;
+    left: 646px;
+}
+
+
 .HpDataS-style{
   padding: 3%;
   top: 500px;
@@ -104,7 +129,6 @@ form
   display:grid;
   grid-template-columns: auto auto auto;
   text-align: center;
-  /*border: 1px solid;*/
   width: 750px;
   height: 360px;
   overflow-y: scroll;
@@ -120,8 +144,7 @@ form
   display:grid;
   grid-template-columns: auto auto auto;
   text-align: center;
-  /*border: 1px solid;*/
-  width: 750px;
+    width: 750px;
   height: 360px;
   overflow-y: scroll;
   overflow-x: hidden;

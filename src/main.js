@@ -1,6 +1,7 @@
 import alldata from './data/harrypotter/data.js';
-import {generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook} from './generatorHTML.js'
-import {filterbyword, filterbyword2} from './dataF.js'
+import { generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook, generatorHTMLSort } from './generatorHTML.js'
+import { filterbyword, filterbyword2 } from './dataF.js'
+
 
 // ------------navbar-----------------------
 window.onscroll = function () { myFunction() };
@@ -16,7 +17,6 @@ function myFunction() {
   }
 }
 
-
 //---------------Carga de data-historia 1----------------
 const root = document.getElementById('root')
 root.classList = 'HpData-style'
@@ -24,8 +24,6 @@ root.classList = 'HpData-style'
 const character = alldata.characters
 
 character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
-
-
 
 //-------filtrado por objeto(characters) ------------------
 document.getElementById("characters").addEventListener("click", function () {
@@ -36,12 +34,9 @@ document.getElementById("characters").addEventListener("click", function () {
 
   const character = alldata.characters
 
-
   character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
 }, true);
-
-
 
 //-------filtrado por objeto(spells) ----------------
 document.getElementById("spells").addEventListener("click", function () {
@@ -96,20 +91,15 @@ document.getElementById("books").addEventListener("click", function () {
 }, true);
 
 //---------uso de función Filter para clasificación por clase----------
-
-document.getElementById("seleccion").addEventListener("click", function () {
+const seleccion = document.getElementById("seleccion")
+seleccion.addEventListener("click", function () {
   document.getElementById("root").innerHTML = "";
-  console.log(seleccion.value);
-
 
   const root = document.getElementById('root')
   root.classList = 'HpDataF-style'
 
-  const character = alldata.characters
-
-
   const wordfilter = seleccion.value
-  console.log(seleccion.value)
+
   if (wordfilter == "Gryffindor" || wordfilter == "Ravenclaw" || wordfilter == "Slytherin" || wordfilter == "Hufflepuff") {
     filterbyword(alldata, wordfilter).forEach(onecharacters => root.appendChild(generatorHTMLfilter(onecharacters)))
   } else {
@@ -118,4 +108,56 @@ document.getElementById("seleccion").addEventListener("click", function () {
 
 }, true)
 
+//------------use de sortData(data, sortBy, sortOrder) ------------------
+document.getElementById("az").addEventListener("click", function () {
+  document.getElementById("root").innerHTML = "";
 
+  const arrayAz = alldata.characters
+  arrayAz.sort((a, b) => {
+    const nombreA = a.name.toLowerCase()
+    const nombreB = b.name.toLowerCase()
+
+    if (nombreA < nombreB) {
+      return -1;
+    }
+    if (nombreA > nombreB) {
+      return 1;
+    }
+    return 0;
+  })
+
+  const root = document.getElementById('root')
+  root.classList = 'HpData-style'
+
+  const character = arrayAz
+
+  character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
+
+}, true);
+
+//------------use de sortData(data, sortBy, sortOrder) de z a a------------------
+document.getElementById("za").addEventListener("click", function () {
+  document.getElementById("root").innerHTML = "";
+
+  const arrayZa = alldata.characters
+  arrayZa.sort((a, b) => {
+    const nombreA = a.name.toLowerCase()
+    const nombreB = b.name.toLowerCase()
+
+    if (nombreB < nombreA) {
+      return -1;
+    }
+    if (nombreB > nombreA) {
+      return 1;
+    }
+    return 0;
+  })
+
+  const root = document.getElementById('root')
+  root.classList = 'HpData-style'
+
+  const character = arrayZa
+ 
+  character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
+
+}, true);
