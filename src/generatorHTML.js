@@ -1,3 +1,5 @@
+import alldata from './data/harrypotter/data.js';
+
 export const generatorHTMLbook = (books) => {
   const div = document.createElement('div')
   const title= document.createElement('h2')
@@ -60,11 +62,12 @@ const generatorHTMLfilter = (characters) => {
 }
 
 export const generatorHTMLSort = (oneh2) => {
+    const arrayAz = alldata.characters 
   const div = document.createElement('div')
   const nameh2 = document.createElement('h2')
-  nameh2.textContent = arrayAz;
+  nameh2.textContent = arrayAz; // tenia error decia que no estaba declarado arrayAz
     
-  div.append(nameh2)
+  div.append(oneh2) //tenia append con nameh2 no utilizaba oneh2
 
   return div
 }

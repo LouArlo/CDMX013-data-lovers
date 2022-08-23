@@ -1,6 +1,6 @@
 import alldata from './data/harrypotter/data.js';
-import { generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook, generatorHTMLSort } from './generatorHTML.js'
-import { filterbyword, filterbyword2 } from './dataF.js'
+import { generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook } from './generatorHTML.js'
+import { filterbyword, filterbyword2, searchItems } from './dataF.js'
 
 
 // ------------navbar-----------------------
@@ -161,3 +161,33 @@ document.getElementById("za").addEventListener("click", function () {
   character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
 }, true);
+
+
+// search prueba1
+
+/*let searchData = document.getElementById("SearchDataInput")
+let searchDataForm = document.getElementById("searchDataF")
+
+function searchItems() {
+    document.getElementById("root").innerHTML = "";
+    searchItems(alldata.characters, searchData.value).forEach((onecharacters)=> {
+        document.getElementById("root").appendChild(generatorHTML(onecharacters))
+    });
+}
+searchDataForm.addEventListener("submit", (X) => {
+    X.preventDefault();
+    searchItems()
+})
+*/
+
+//search prueba 2
+let inputByName = document.getElementById("SearchDataInput")
+const btnSearchSubmit = document.getElementById("searchBtn")
+btnSearchSubmit.addEventListener('click',() =>{
+    const dataChars = alldata.characters
+    let searchData = searchByName(dataChars, inputByName.value);
+
+    if (searchData.lengt > 0 ){
+        
+    }
+})

@@ -9,3 +9,10 @@ export function filterbyword2(alldata, wordfilter) {
     return chars.spell_type == wordfilter
   })
 }
+
+//prueba search 1
+/*export const searchItems = (alldata, input) =>{
+  return alldata.characters.filter((items)=>(items.name.toLowareCase()).slice(0,(input.toLowareCase()).length)===input.toLowareCase());
+}*/
+
+
