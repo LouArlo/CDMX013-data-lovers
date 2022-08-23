@@ -110,8 +110,7 @@ button {
 #az{
     top: 247px;
     left: 647px;  
-    /*background: #18181191;
-    color: #8d8d82;*/
+    
     
 }
 
@@ -120,6 +119,10 @@ button {
     left: 646px;
 }
 
+.ion-icon:hover {
+  background-color: rgba(108, 50, 50, 0.684);
+  color: rgb(8, 7, 7);
+}
 
 .HpDataS-style{
   padding: 3%;

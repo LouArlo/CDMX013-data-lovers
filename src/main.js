@@ -1,6 +1,6 @@
 import alldata from './data/harrypotter/data.js';
-import { generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook, generatorHTMLSort } from './generatorHTML.js'
-import { filterbyword, filterbyword2 } from './dataF.js'
+import { generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook} from './generatorHTML.js'
+import { filterbyword, filterbyword2, sortAz, sortZa } from './dataF.js'
 
 
 // ------------navbar-----------------------
@@ -113,18 +113,8 @@ document.getElementById("az").addEventListener("click", function () {
   document.getElementById("root").innerHTML = "";
 
   const arrayAz = alldata.characters
-  arrayAz.sort((a, b) => {
-    const nombreA = a.name.toLowerCase()
-    const nombreB = b.name.toLowerCase()
 
-    if (nombreA < nombreB) {
-      return -1;
-    }
-    if (nombreA > nombreB) {
-      return 1;
-    }
-    return 0;
-  })
+  sortAz(arrayAz)
 
   const root = document.getElementById('root')
   root.classList = 'HpData-style'
@@ -140,24 +130,16 @@ document.getElementById("za").addEventListener("click", function () {
   document.getElementById("root").innerHTML = "";
 
   const arrayZa = alldata.characters
-  arrayZa.sort((a, b) => {
-    const nombreA = a.name.toLowerCase()
-    const nombreB = b.name.toLowerCase()
 
-    if (nombreB < nombreA) {
-      return -1;
-    }
-    if (nombreB > nombreA) {
-      return 1;
-    }
-    return 0;
-  })
+  sortZa(arrayZa)
 
   const root = document.getElementById('root')
   root.classList = 'HpData-style'
 
   const character = arrayZa
- 
+
   character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
 }, true);
+
+
