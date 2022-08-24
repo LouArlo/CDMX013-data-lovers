@@ -58,8 +58,8 @@ const generatorHTMLfilter = (characters) => {
 
   return div
 }
-
-export const generatorHTMLSort = (oneh2) => {
+//esta funcion no se utiliza
+/*export const generatorHTMLSort = (oneh2) => {
   const div = document.createElement('div')
   const nameh2 = document.createElement('h2')
   nameh2.textContent = arrayAz;
@@ -67,7 +67,7 @@ export const generatorHTMLSort = (oneh2) => {
   div.append(nameh2)
 
   return div
-}
+}*/
 
 export { generatorHTMLfilter };
 export { generatorHTML };
