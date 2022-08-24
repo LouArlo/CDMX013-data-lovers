@@ -1,6 +1,6 @@
 import alldata from './data/harrypotter/data.js';
 import { generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook } from './generatorHTML.js'
-import { filterbyword, filterbyword2, searchItems } from './dataF.js'
+import { filterbyword, filterbyword2} from './dataF.js'
 
 
 // ------------navbar-----------------------
@@ -181,7 +181,7 @@ searchDataForm.addEventListener("submit", (X) => {
 */
 
 //search prueba 2
-let inputByName = document.getElementById("SearchDataInput")
+/*let inputByName = document.getElementById("SearchDataInput")
 const btnSearchSubmit = document.getElementById("searchBtn")
 btnSearchSubmit.addEventListener('click',() =>{
     const dataChars = alldata.characters
@@ -190,4 +190,4 @@ btnSearchSubmit.addEventListener('click',() =>{
     if (searchData.lengt > 0 ){
         
     }
-})
+})*/
