@@ -22,10 +22,20 @@ body {
   display: block;
   color: #ac9e9e;
   text-align: center;
-  padding: 18px 18px;
+  padding: 16px 25px;
   text-decoration-color: rgb(73, 95, 76);
   font-size: 23px;
   text-shadow: rgb(3, 2, 2);
+  border: 2px;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 50px;
 }
 
 #navigation a:hover {
@@ -36,12 +46,14 @@ body {
 #navigation a.chars {
   background-color: rgba(36, 33, 33, 0.55);
   color: rgb(251, 249, 249);
+  
   }
 
 #navigation a.chars:hover {
   background-color: rgba(108, 50, 50, 0.684);
   color: rgb(8, 7, 7);
 }
+
 
 .sticky {
   position: fixed;
@@ -53,87 +65,51 @@ body {
   padding-top: 25px;
 }
 
-.li  {
-  display: none;
-}
-.li {
-  display: block;
-}
-
-
 option {
   padding: 50px 100px;
-
 } 
 
-#boton{
-  padding: 100px 200px;
-  display:none;
-}
-
-form
-{
-  padding: 30px 260px;
-  font-size: x-large;
-  font-family: auto;
-  color: azure;
-}
+/*.navSearch{
+  top: 50px;
+  left: 1000px;
+}*/
+/*button {
+  left: 1150px;
+  border-radius: 100%/100%;
+  margin: 1px;
+  position: absolute;
+  font-size: 15px;
+  cursor: pointer;
+}*/
 
 .HpData-style{
   padding: 3%;
   top: 500px;
-  left: 165px;
+  left: 200px;
   position: absolute;
   display:grid;
   grid-template-columns: auto auto auto auto;
   text-align: center;
   /*border: 1px solid;*/
-  width: 690px;
-  height: 350px;
+  width: 565px;
+  height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;
   background-image:url(images/parchman.png);
   z-index: 1;
 } 
 
-button {
-  
-  font-size: 20px;
-  padding: 0px 0px;
-  margin: 2px;
-  position: absolute;
-  font-size: 15px;
-  cursor: pointer;
-  /*border-radius: 5px;*/
-}
-
-#az{
-    top: 247px;
-    left: 647px;  
-    
-    
-}
-
-#za{
-    top: 279px;
-    left: 646px;
-}
-
-.ion-icon:hover {
-  background-color: rgba(108, 50, 50, 0.684);
-  color: rgb(8, 7, 7);
-}
-
 .HpDataS-style{
   padding: 3%;
   top: 500px;
-  left: 120px;
+  left: 150px;
   position: absolute;
   display:grid;
   grid-template-columns: auto auto auto;
   text-align: center;
+  
   width: 750px;
-  height: 360px;
+  height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;
   background-image:url(images/parchman.png);
@@ -142,12 +118,13 @@ button {
 .HpDataF-style{
   padding: 3%;
   top: 500px;
-  left: 120px;
+  left: 150px;
   position: absolute;
   display:grid;
   grid-template-columns: auto auto auto;
   text-align: center;
-    width: 750px;
+  text-shadow: 0 0 1px rgba(43, 86, 14, 0.815);
+  width: 750px;
   height: 360px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -166,10 +143,9 @@ h3{
   margin: 10px;
   background: #d7d3cd40;
   
+  
 }
 
 .root {
   padding: 20px;
 }
-
-
