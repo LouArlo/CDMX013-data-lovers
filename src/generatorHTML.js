@@ -59,7 +59,7 @@ const generatorHTMLfilter = (characters) => {
   return div
 }
 
-export const generatorHTMLSort = (oneh2) => {
+/*export const generatorHTMLSort = (oneh2) => {
   const div = document.createElement('div')
   const nameh2 = document.createElement('h2')
   nameh2.textContent = arrayAz;
@@ -67,7 +67,40 @@ export const generatorHTMLSort = (oneh2) => {
   div.append(nameh2)
 
   return div
+}*/
+
+export const generatorHTMLSearch = (characters) => {
+  const div = document.createElement('div')
+  const nameCharacter = document.createElement('h2')
+  nameCharacter.textContent = characters.name
+  const birthCharacter = document.createElement('h3')
+  birthCharacter.textContent = characters.birth
+  const deathCharacter = document.createElement('h3')
+  deathCharacter.textContent = characters.death
+  const speciesCharacter = document.createElement('h3')
+  speciesCharacter.textContent = characters.species
+  const ancestryCharacter = document.createElement('h3')
+  ancestryCharacter.textContent = characters.ancestry
+  const genderCharacter = document.createElement('h3')
+  genderCharacter.textContent = characters.gender
+  const hair_colorCharacter = document.createElement('h3')
+  hair_colorCharacter.textContent = characters.hair_color
+  const eye_colorCharacter = document.createElement('h3')
+  eye_colorCharacter.textContent = characters.eye_color
+  const wandCharacter = document.createElement('h3')
+  wandCharacter.textContent = characters.wand
+  const patronusCharacter = document.createElement('h3')
+  patronusCharacter.textContent = characters.patronus
+  const houseCharacter = document.createElement('h3')
+  houseCharacter.textContent = characters.house
+  const associated_groupsCharacter = document.createElement('h3')
+  associated_groupsCharacter.textContent = characters.associated_groups
+
+  div.append(nameCharacter,birthCharacter,deathCharacter,speciesCharacter, ancestryCharacter, genderCharacter, hair_colorCharacter, eye_colorCharacter, wandCharacter, patronusCharacter, houseCharacter, associated_groupsCharacter)
+
+  return div
 }
+
 
 export { generatorHTMLfilter };
 export { generatorHTML };

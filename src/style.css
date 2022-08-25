@@ -22,6 +22,191 @@ body {
   display: block;
   color: #ac9e9e;
   text-align: center;
+  padding: 16px 25px;
+  text-decoration-color: rgb(73, 95, 76);
+  font-size: 23px;
+  text-shadow: rgb(3, 2, 2);
+  border: 2px;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 50px;
+}
+
+#navigation a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navigation a.chars {
+  background-color: rgba(36, 33, 33, 0.55);
+  color: rgb(251, 249, 249);
+  
+  }
+
+#navigation a.chars:hover {
+  background-color: rgba(108, 50, 50, 0.684);
+  color: rgb(8, 7, 7);
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .root {
+  padding-top: 25px;
+}
+
+option {
+  padding: 50px 100px;
+} 
+
+/*.navSearch{
+  top: 50px;
+  left: 1000px;
+}*/
+/*button {
+  left: 1150px;
+  border-radius: 100%/100%;
+  margin: 1px;
+  position: absolute;
+  font-size: 15px;
+  cursor: pointer;
+}*/
+
+.HpData-style{
+  padding: 3%;
+  top: 500px;
+  left: 200px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  text-align: center;
+  /*border: 1px solid;*/
+  width: 565px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image:url(images/parchman.png);
+  z-index: 1;
+} 
+
+.HpDataS-style{
+  padding: 3%;
+  top: 500px;
+  left: 150px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  
+  width: 750px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image:url(images/parchman.png);
+} 
+
+.HpDataF-style{
+  padding: 3%;
+  top: 500px;
+  left: 150px;
+  position: absolute;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  text-shadow: 0 0 1px rgba(43, 86, 14, 0.815);
+  width: 750px;
+  height: 360px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-repeat:no-repeat;
+  /*background-color: darkolivegreen;*/
+  background-image: url(images/dementor.png);
+  /*opacity: 3;*/
+  ;
+} 
+
+.HpDataSearch-style{
+  padding: 3%;
+  top: 500px;
+  left: 1020px;
+  position: absolute;
+  /*background-color: #ada78e63;*/
+  /*display:grid;*/
+  /*grid-template-columns: auto auto auto;*/
+  text-align: center;
+  text-shadow: 0 0 1px rgba(162, 165, 159, 0.815);
+  width: 330px;
+  height: 560px;
+ /* background-color: rgb(240, 238, 235);*/
+ /* overflow-y: scroll;
+  overflow-x: hidden;
+  background-repeat:no-repeat;
+  /*background-color: darkolivegreen;*/
+ /* background-image: url(images/dementor.png);*/
+  /*opacity: 3;*/
+  ;
+} 
+
+h3{
+  font-size: 1em;
+  font-weight: normal;
+  text-align: justify;
+  margin: 10px;
+  background: #d7d3cd40;
+  
+  
+}
+
+.root {
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+header{
+  background-image:url(images/header.png);
+}
+
+body {
+  margin: 0;
+  background-image:url(images/bodyback.png);
+  width: 1440px;
+  height: 1079px;
+}
+
+#navigation {
+  overflow: hidden;
+  background-image:url(images/backnav.png);
+  display: flex;
+  z-index: 2;
+  
+}
+  
+#navigation a {
+  float: left;
+  display: block;
+  color: #ac9e9e;
+  text-align: center;
   padding: 18px 18px;
   text-decoration-color: rgb(73, 95, 76);
   font-size: 23px;
@@ -88,11 +273,29 @@ form
   grid-template-columns: auto auto auto auto;
   text-align: center;
   /*border: 1px solid;*/
-  width: 690px;
+ /* width: 690px;
   height: 350px;
   overflow-y: scroll;
   overflow-x: hidden;
   background-image:url(images/parchman.png);
+  z-index: 1;
+} 
+
+.HpDataBox-style, .box2{
+  padding: 3%;
+  top: 361px;
+  left: 1066px;
+  position: absolute;
+  /*display:grid;
+  grid-template-columns: auto auto auto auto;*/
+/*  text-align: center;
+ border: 1px solid;
+  width: 241px;
+  height: 492px;
+ /*overflow-y: scroll;
+  overflow-x: hidden;*/
+/*  background-image:url(images/dementor.png);
+  opacity: 3;
   z-index: 1;
 } 
 
@@ -105,7 +308,7 @@ button {
   font-size: 15px;
   cursor: pointer;
   /*border-radius: 5px;*/
-}
+/*}
 
 #az{
     top: 247px;
@@ -153,10 +356,10 @@ button {
   overflow-x: hidden;
   background-repeat:no-repeat;
   /*background-color: darkolivegreen;*/
-  background-image: url(images/dementor.png);
+ /* background-image: url(images/dementor.png);
   /*opacity: 3;*/
   ;
-} 
+/*} 
 
 
 h3{
@@ -171,5 +374,5 @@ h3{
 .root {
   padding: 20px;
 }
-
+*/
 
