@@ -1,145 +1,170 @@
 import alldata from './data/harrypotter/data.js';
-import { generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook} from './generatorHTML.js'
-import { filterbyword, filterbyword2, sortAz, sortZa } from './dataF.js'
+import { generatorHTMLSearch, generatorHTMLfilter, generatorHTML, generatorHTMLdescribe, generatorHTMLff, generatorHTMLbook} from './generatorHTML.js'
+import { filterbyword, filterbyword2,  sortAz, sortZa, searCh } from './dataF.js'
 
 
 // ------------navbar-----------------------
-window.onscroll = function () { myFunction() };
+window.onscroll = function () { moveSticky() };
 
-var navbar = document.getElementById("navigation");
-var sticky = navbar.offsetTop;
+window.addEventListener("load", showInit);
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
+function moveSticky() {
+
+  let navbar = document.getElementById("navigation");
+  let sticky = navbar.offsetTop;
+
+  /*function myFunction() {*/
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
   }
-}
-
+/*}*/
 //---------------Carga de data-historia 1----------------
-const root = document.getElementById('root')
-root.classList = 'HpData-style'
+  export function showInit() {
+    const root = document.getElementById('root')
+    root.classList = 'HpData-style'
 
-const character = alldata.characters
+    const character = alldata.characters
 
-character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
+    character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
-//-------filtrado por objeto(characters) ------------------
-document.getElementById("characters").addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
+    //-------filtrado por objeto(characters) ------------------
+    document.getElementById("characters").addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
 
-  const root = document.getElementById('root')
-  root.classList = 'HpData-style'
+      const root = document.getElementById('root')
+      root.classList = 'HpData-style'
 
-  const character = alldata.characters
+      const character = alldata.characters
 
-  character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
+      character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
 
-}, true);
+    }, true);
 
-//-------filtrado por objeto(spells) ----------------
-document.getElementById("spells").addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
+    //-------filtrado por objeto(spells) ----------------
+    document.getElementById("spells").addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
 
-  const root = document.getElementById('root')
-  root.classList = 'HpDataS-style'
+      const root = document.getElementById('root')
+      root.classList = 'HpDataS-style'
 
-  const spell = alldata.spells
+      const spell = alldata.spells
 
-  spell.forEach(onespell => root.appendChild(generatorHTMLdescribe(onespell)))
+      spell.forEach(onespell => root.appendChild(generatorHTMLdescribe(onespell)))
 
-}, true);
+    }, true);
 
-// ------filtrado por objeto (fun Fact)----------------
-document.getElementById("fun facts").addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
+    // ------filtrado por objeto (fun Fact)----------------
+    document.getElementById("fun facts").addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
 
-  const root = document.getElementById('root')
-  root.classList = 'HpDataS-style'
+      const root = document.getElementById('root')
+      root.classList = 'HpDataS-style'
 
-  const funFact = alldata.funFacts
+      const funFact = alldata.funFacts
 
-  funFact.forEach(onefunFact => root.appendChild(generatorHTMLff(onefunFact)))
+      funFact.forEach(onefunFact => root.appendChild(generatorHTMLff(onefunFact)))
 
-}, true);
+    }, true);
 
-// -------filtrado por objeto (Potions)-----------------
-document.getElementById("potions").addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
+    // -------filtrado por objeto (Potions)-----------------
+    document.getElementById("potions").addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
 
-  const root = document.getElementById('root')
-  root.classList = 'HpDataS-style'
+      const root = document.getElementById('root')
+      root.classList = 'HpDataS-style'
 
-  const potion = alldata.potions
+      const potion = alldata.potions
 
-  potion.forEach(onepotions => root.appendChild(generatorHTMLdescribe(onepotions)))
+      potion.forEach(onepotions => root.appendChild(generatorHTMLdescribe(onepotions)))
 
-}, true);
+    }, true);
 
-//---------filtrado pot objeto (books)---------------
-document.getElementById("books").addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
+    //---------filtrado pot objeto (books)---------------
+    document.getElementById("books").addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
 
-  const root = document.getElementById('root')
-  root.classList = 'HpDataS-style'
+      const root = document.getElementById('root')
+      root.classList = 'HpDataS-style'
 
-  const book = alldata.books
+      const book = alldata.books
 
-  book.forEach(onebook => root.appendChild(generatorHTMLbook(onebook)))
+      book.forEach(onebook => root.appendChild(generatorHTMLbook(onebook)))
 
-}, true);
+    }, true);
 
-//---------uso de función Filter para clasificación por clase----------
-const seleccion = document.getElementById("seleccion")
-seleccion.addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
+    //---------uso de función Filter para clasificación por clase----------
+    const seleccion = document.getElementById("seleccion")
+    seleccion.addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
 
-  const root = document.getElementById('root')
-  root.classList = 'HpDataF-style'
+      const root = document.getElementById('root')
+      root.classList = 'HpDataF-style'
 
-  const wordfilter = seleccion.value
+      const wordfilter = seleccion.value
 
-  if (wordfilter == "Gryffindor" || wordfilter == "Ravenclaw" || wordfilter == "Slytherin" || wordfilter == "Hufflepuff") {
-    filterbyword(alldata, wordfilter).forEach(onecharacters => root.appendChild(generatorHTMLfilter(onecharacters)))
-  } else {
-    filterbyword2(alldata, wordfilter).forEach(onecharacters => root.appendChild(generatorHTMLfilter(onecharacters)))
+      if (wordfilter == "Gryffindor" || wordfilter == "Ravenclaw" || wordfilter == "Slytherin" || wordfilter == "Hufflepuff") {
+        filterbyword(alldata, wordfilter).forEach(onecharacters => root.appendChild(generatorHTMLfilter(onecharacters)))
+      } else {
+        filterbyword2(alldata, wordfilter).forEach(onecharacters => root.appendChild(generatorHTMLfilter(onecharacters)))
+      }
+
+    }, true)
+
+    //------------use de sortData(data, sortBy, sortOrder) ------------------
+    document.getElementById("az").addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
+
+      const arrayAz = alldata.characters
+
+      sortAz(arrayAz)
+
+      const root = document.getElementById('root')
+      root.classList = 'HpData-style'
+
+      const character = arrayAz
+
+      character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
+
+    }, true);
+
+    //------------use de sortData(data, sortBy, sortOrder) de z a a------------------
+    document.getElementById("za").addEventListener("click", function () {
+      document.getElementById("root").innerHTML = "";
+
+      const arrayZa = alldata.characters
+
+      sortZa(arrayZa)
+
+      const root = document.getElementById('root')
+      root.classList = 'HpData-style'
+
+      const character = arrayZa
+
+      character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
+
+    }, true);
+
+    //-----------------------search -----------
+
+    document.getElementById("searchBtn").addEventListener("click", function (e) {
+      e.preventDefault()
+      //seleccionSearch.addEventListener("click", function () {
+
+      document.getElementById("root2").innerHTML = "";
+      //document.getElementById(SearchDataInput)
+      const input = document.getElementById("SearchDataInput").value;
+
+      const root2 = document.getElementById('root2')
+      root2.classList = 'HpDataSearch-style'
+      
+      searCh(alldata.characters, input).forEach(onecharacters => root2.appendChild(generatorHTMLSearch(onecharacters)))
+      
+      }, true)
+
   }
 
-}, true)
-
-//------------use de sortData(data, sortBy, sortOrder) ------------------
-document.getElementById("az").addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
-
-  const arrayAz = alldata.characters
-
-  sortAz(arrayAz)
-
-  const root = document.getElementById('root')
-  root.classList = 'HpData-style'
-
-  const character = arrayAz
-
-  character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
-
-}, true);
-
-//------------use de sortData(data, sortBy, sortOrder) de z a a------------------
-document.getElementById("za").addEventListener("click", function () {
-  document.getElementById("root").innerHTML = "";
-
-  const arrayZa = alldata.characters
-
-  sortZa(arrayZa)
-
-  const root = document.getElementById('root')
-  root.classList = 'HpData-style'
-
-  const character = arrayZa
-
-  character.forEach(onecharacters => root.appendChild(generatorHTML(onecharacters)))
-
-}, true);
-
-
+  
+  

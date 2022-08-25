@@ -10,6 +10,7 @@ export function filterbyword2(alldata, wordfilter) {
   })
 }
 
+
 export const sortAz = (x) =>
   x.sort((a, b) => {
     const nombreA = a.name.toLowerCase()
@@ -38,4 +39,10 @@ export const sortZa = (x) =>
       return 1;
     }
     return 0;
-  })
+  });
+
+  export function searCh (x,input) {
+    return x.filter(
+    (character) => character.name === input
+          )
+  }
