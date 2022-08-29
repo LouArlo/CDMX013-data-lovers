@@ -2,22 +2,36 @@
 
 Harry Poter
 
-¿Quiénes son los principales usuarios de producto? Toda aquella persona que quiera conocer acerca de Harry Potter
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto? Recordar algún hechizo, posima, personaje o simplemente distraerse recordando
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué? Podrán ver la información de forma fácil ya que la aplicación permite filtrar y ordenar la información de modo que sea práctico buscar algún dato en específico
-* ¿Cuándo utilizan o utilizarían el producto? Cuando tengan algún inquietud por algún dato que no recuerden bien o quieran conocer de manera general el mundo de Harry Potter
 
-Como primera parte del Proyecto tenemos un análisis de la información proporcionada, la cual furon 5 bases de datos correspondientes a los temas:
-* Personajes
+¿Quiénes son los principales usuarios de producto? La intención de está aplicación es proporcionar un material de consuta sobre el mundo de Harry Potter y esta dirigido a todo persona que quiera conocer acerca de.
+
+¿Cuáles son los objetivos de estos usuarios en relación con el producto? Conocer por primera vez a sus personajes, conocer en general todo lo que los rodea como son las casas en que se divide la escuela, echizos, posimas, libros, etc. Así como también recordar algúno de ellos o simplemente distraerse recordando.
+
+¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué? Podrían revisar información por cada personaje, así como verificar echizoa y posimas, bibliografía de libros, etc.Podrán ver la información de forma fácil ya que la aplicación permite filtrar y ordenar la información de modo que sea práctico buscar algún dato en específico.
+
+¿Cuándo utilizan o utilizarían el producto? Cuando tengan algún inquietud por algún dato que no recuerden bien o quieran conocer de manera general el mundo de Harry Potter.
+
+El proyecto se dividió en Historias, en cada una se realizó una actividad específica.
+
+Como Primera parte del Proyecto tenemos un análisis de la información. Se despliega en un scroll se despliega información separad por secciones sin ningún orden en específico, la información arrojada eson los temas:
+*Personajes
 *Hechizos
 *Eventos Graciosos
 *Pósimas
 *Libros
 
 Se realizo un bosquejo a mano el cual fue plasmado en Figma y consiste de una pantalla continúa (en scroll) con diversas secciones:
- 1) historia 1: muestra el información general  tal y como se encuentra diseñada en el origen (sin orden, sin filtros), se secciono un espacio para ello con una caja scroll, se colocarón las imágenes de los personajes más conocidos y en el resto de la base se colocó una imágen génerica.
+ 1)Historia 1: muestra el información general  tal y como se encuentra diseñada en el origen (sin orden, sin filtros), se secciono un espacio para ello con una caja scroll, se colocarón las imágenes de los personajes más conocidos y en el resto de la base se colocó una imágen génerica. La forma de organizarnos fué por tareas.
 
- 2)
+ 2)Historia 2: se realizó el despliegue de los demás elementos, tal como se hizo con la información de pesonajes, echizo, posiones, libros, y cosas curiosas. Cambiamos la forma de colaboración y empezamos a codear juntas
+
+ 3)Historia 3: se organizó la sección de ordenar de forma ascendente y descedente: la sección de personajes. La forma de hacerlo fue igual de codear juntas.
+
+ 4)Historia 4: Presentamos una sección de filtrado que permite copiar el nombre de un personaje y buscarlo para concer la información específica que se tiene de él en la base de datos.
+
+ Trabajamos en la parte de test y recervamos un espacio para repasar conocimientos adquiridos.
+
+ Integrantes Dupla 8: Mayan Santiago / Lourdes Arellano
 
 
 

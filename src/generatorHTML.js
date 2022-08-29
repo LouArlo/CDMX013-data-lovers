@@ -59,15 +59,6 @@ const generatorHTMLfilter = (characters) => {
   return div
 }
 
-/*export const generatorHTMLSort = (oneh2) => {
-  const div = document.createElement('div')
-  const nameh2 = document.createElement('h2')
-  nameh2.textContent = arrayAz;
-    
-  div.append(nameh2)
-
-  return div
-}*/
 
 export const generatorHTMLSearch = (characters) => {
   const div = document.createElement('div')
