@@ -1,55 +1,154 @@
+header{
+  background-image:url(images/header.png);
+}
+
+body {
+  margin: 0;
+  background-image:url(images/bodyback.png);
+  width: 1440px;
+  height: 1079px;
+  z-index: 1;
+}
+
+#navigation {
+  overflow: hidden;
+  background-image:url(images/backnav.png);
+  display: flex;
+  z-index: 2;
+  
+}
+  
+#navigation a {
+  float: left;
+  display: block;
+  color: #ac9e9e;
+  text-align: center;
+  padding: 16px 25px;
+  text-decoration-color: rgb(73, 95, 76);
+  font-size: 23px;
+  text-shadow: rgb(3, 2, 2);
+  border: 2px;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 50px;
+}
+
+#navigation a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navigation a.chars {
+  background-color: rgba(36, 33, 33, 0.55);
+  color: rgb(251, 249, 249);
+  
+  }
+
+#navigation a.chars:hover {
+  background-color: rgba(108, 50, 50, 0.684);
+  color: rgb(8, 7, 7);
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .root {
+  padding-top: 25px;
+}
+
+option {
+  padding: 50px 100px;
+} 
+
 .HpData-style{
   padding: 3%;
-  top: 900px;
-  left: 140px;
+  top: 435px;
+  left: 210px;
   position: absolute;
   display:grid;
   grid-template-columns: auto auto auto auto;
   text-align: center;
-  /*border: 1px solid;*/
-  width: 690px;
-  height: 400px;
+  width: 585px;
+  height: 530px;
   overflow-y: scroll;
   overflow-x: hidden;
-  /*background-image:url(images/parchman.png);*/
+  background-image:url(images/parchman.png);
+  z-index: 1;
 } 
 
-/*.HpData-style :hover{
-  transform: scale(.9);
-  box-shadow: .1px .1px .1px rgba(205, 194, 194, 0.088);
-}*/
-
-
-/*.haveyou{
+.HpDataS-style{
+  padding: 3%;
+  top: 435px;
+  left: 210px;
   position: absolute;
-  display: inline-block;
-  z-index: 1;
-  mix-blend-mode: darken;
-  top: 920Px;
-  left: 320px;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  width: 585px;
+  height: 528px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image:url(images/parchman.png);
+} 
 
-}
-
-#houses{
+.HpDataF-style{
+  padding: 3%;
+  top: 450px;
+  left: 200px;
   position: absolute;
-  top: 1100px;
-  left: 1100px;
-  height: 870px;
-  width: 320px;
-  border-radius: 0px;
-  background: rgba(48, 25, 25, 0.417);
-  z-index: 1;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  text-shadow: 0 0 1px rgba(57, 90, 35, 0.815);
+  width: 585px;
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-repeat:no-repeat;
+ } 
+
+.HpDataSearch-style{
+  padding: 3%;
+  top: 500px;
+  left: 1020px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(57, 66, 47, 0.815);
+  width: 270px;
+  height: 560px;
+} 
+
+h3{
+  font-size: 1em;
+  font-weight: normal;
+  text-align: justify;
+  margin: 10px;
+  background: #d7d3cd40;
   
-}*/
-
-/*.close {
-  background: transparent;
-  float: right;
+  
 }
 
-.close:hover, .close:focus {
-background: transparent;
-cursor: pointer;
-}*/
+.root {
+  padding: 20px;
+}
 
+
+/*#graphics{
+width: 400px;
+height: 400px;
+border: 2px solid green;
+position: absolute;
+top: 1200px;
+left: 525px;
+}*/
 
