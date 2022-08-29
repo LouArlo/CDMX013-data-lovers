@@ -20,7 +20,7 @@ function moveSticky() {
       navbar.classList.remove("sticky");
     }
   }
-/*}*/
+
 //---------------Carga de data-historia 1----------------
   export function showInit() {
     const root = document.getElementById('root')
@@ -166,5 +166,49 @@ function moveSticky() {
 
   }
 
+  /*function graphics (alldata) {
+  //  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+  const contGryffindor = 0;
+  const contRavenclaw = 0;
+  const contSlytherin = 0;
+  const contHufflepuff = 0;
+
+  const character=alldata.characters;
+  
+    for (let i = 0; i<character.lenght; i++) {
+      if (character[i].house=="Gryffindor") {
+        contGryffindor =+ contGryffindor+1
+      };
+
+      if (character[i].house=="Ravenclaw") {
+        contRavenclaw =+ contRavenclaw+1
+      };
+
+      if (character[i].house =="Slytherin") {
+        contSlytherin =+ contSlytherin + 1
+      };
+
+      if (character[i].house == "Hufflepuff") {
+        contHufflepuff =+ contHufflepuff + 1
+      };
+
+    }
+    return contGryffindor,contHufflepuff,contRavenclaw,contSlytherin
+
+    let Canvas = document.getElementById("graphics").getContext("2d")
+
+     const chart = new Chart(Canvas, {
+      type:"bar",
+      data:{
+        labels:["Gryffindor","ravenclaw","Slytherin","Hufflepuff"],
+        datasets:[
+          {
+            label:"Representación Gráfica de Personajes por Casa",
+            data:[contGryffindor,contRavenclaw,contSlytherin,contHufflepuff]
+          }
+        ]
+      }
+     });
+}*/
   
   
