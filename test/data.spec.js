@@ -41,28 +41,42 @@ describe('should order AZ, Z-A and Filter', () => {
     expect(typeof sortZa).toBe('function');
   });
   
- 
+  
+  
+ // test of función sort from Z to A
   it('returns `order`', () => {
     const names = [{"name": "Zoo director" }, { "name": "Aberforth Dumbledore" }]
-    
     expect(sortZa(names)).toStrictEqual([{"name": "Zoo director" }, { "name": "Aberforth Dumbledore" }]);
   });
+  it('returns `order`', () => {
+    const names = [{"name": "Zoo director" }, { "name": "Aberforth Dumbledore" },{"name": "Zoo director" }]
+    expect(sortZa(names)).toStrictEqual([{"name": "Zoo director" },{"name": "Zoo director" },{ "name": "Aberforth Dumbledore" }]);
+  });
+
+ // test of function sort from A to Z 
   it('is a function', () => {
     expect(typeof sortAz).toBe('function');
   });
-
+  
   it('returns `order`', () => {
     const names = [{"name": "Aberforth Dumbledore" }, { "name": "Zoo director" }]
     
     expect(sortAz(names)).toStrictEqual([{"name": "Aberforth Dumbledore" }, {"name": "Zoo director" }]);
   });
+  it('returns `order`', () => {
+    const names = [{"name": "Aberforth Dumbledore" }, { "name": "Zoo director" },{"name": "Aberforth Dumbledore" }]
+    
+    expect(sortAz(names)).toStrictEqual([{"name": "Aberforth Dumbledore" },{"name": "Aberforth Dumbledore" }, {"name": "Zoo director" }]);
+  });
 
+  // test of function Search by character
   it('returns `search`', () => {
     const namesSearch = [{"name": "Wendelin the Weird"}, {"id": "25"}]
     
     expect(searCh(namesSearch, "Wendelin the Weird")).toEqual([{"name": "Wendelin the Weird" }]);
   });
  
+  
 
 });
 
